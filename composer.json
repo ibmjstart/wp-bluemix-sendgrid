@@ -1,0 +1,11 @@
+{
+    "name": "ibmjstart/wp-bluemix-sendgrid",
+    "description": "Bluemix sendgrid plugin to retrieve VCAP Credentials",
+    "type": "library",
+    "keywords": [
+        "sendgrid",
+        "bluemix"
+    ],
+    "homepage": "https://github.com/ibmjstart/",
+    "license": "GPLv3"
+}
