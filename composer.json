@@ -1,7 +1,7 @@
 {
     "name": "ibmjstart/wp-bluemix-sendgrid",
     "description": "Bluemix sendgrid plugin to retrieve VCAP Credentials",
-    "type": "library",
+    "type": "wordpress-plugin",
     "keywords": [
         "sendgrid",
         "bluemix"
