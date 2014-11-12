@@ -8,26 +8,23 @@
    License: GPLv3
    */
 
-   	$vcap = getenv("VCAP_SERVICES");
-   	if($vcap) {
-   		$data = json_decode($vcap, true);
-   		if(!is_null($data) && isset($data['sendgrid'])) {
-   			$creds = $data['sendgrid'][0]['credentials'];
+      $vcap = getenv("VCAP_SERVICES");
+      if($vcap) {
+         $data = json_decode($vcap, true);
+         if(!is_null($data) && isset($data['sendgrid'])) {
+            $creds = $data['sendgrid'][0]['credentials'];
 
-   			update_option( 'sendgrid_user', $creds['username'] );
-   			update_option( 'sendgrid_pwd', $creds['password'] );
-   			update_option( 'sendgrid_api', 'api' );
+            update_option( 'sendgrid_user', $creds['username'] );
+            update_option( 'sendgrid_pwd', $creds['password'] );
+            update_option( 'sendgrid_api', 'api' );
 
-   			add_action('admin_enqueue_scripts', 'add_bluemix_sendgrid_scripts');
-   		}
-   	}
+            add_action('admin_enqueue_scripts', 'add_bluemix_sendgrid_scripts');
+         }
+      }
 
-   	function add_bluemix_sendgrid_scripts() {
-   		wp_enqueue_script( 'disable-sendgrid-opts', plugins_url('sendgrid-opts-disable.js', __FILE__), 'jquery');
-
-   	}
-
-
-
-
+      function add_bluemix_sendgrid_scripts($hook) {
+         if($hook == 'settings_page_sendgrid-settings'){
+            wp_enqueue_script( 'disable-sendgrid-opts', plugins_url('sendgrid-opts-disable.js', __FILE__), 'jquery');
+         }
+      }
 ?>
