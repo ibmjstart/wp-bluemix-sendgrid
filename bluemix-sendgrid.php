@@ -3,8 +3,9 @@
    Plugin Name: SendGrid on Wordpress on Bluemix
    Description: A plugin that enables SendGrid to work easily with Bluemix's VCAP credentials.
    Version: 0.1
+   Plugin URI: https://github.com/ibmjstart/wp-bluemix-sendgrid
    Author: Jason Killian
-   Author URI: http://www.jasonkillian.com
+   Author URI: http://ibm.com/jstart/
    License: GPLv3
    */
 
