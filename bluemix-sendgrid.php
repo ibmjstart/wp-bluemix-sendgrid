@@ -5,7 +5,7 @@
    Version: 0.1
    Plugin URI: https://github.com/ibmjstart/wp-bluemix-sendgrid
    Author: IBM
-   Author URI: http://www.ibm.com/us/en/
+   Author URI: http://ibm.com/jstart
    License: GPLv3
    */
 
