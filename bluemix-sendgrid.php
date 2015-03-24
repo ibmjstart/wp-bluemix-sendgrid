@@ -8,7 +8,9 @@
    Author URI: http://ibm.com/jstart
    License: GPLv3
    */
-
+      
+      $plugin = plugin_basename( __FILE__ );
+      
       $vcap = getenv("VCAP_SERVICES");
       if($vcap) {
          $data = json_decode($vcap, true);
