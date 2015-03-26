@@ -8,7 +8,4 @@
     ],
     "homepage": "https://github.com/ibmjstart/",
     "license": "GPLv3",
-    "require": {
-        "composer/installers": "~1.0"
-    }
 }
